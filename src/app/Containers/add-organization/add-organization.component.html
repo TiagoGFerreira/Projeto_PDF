@@ -1,0 +1,59 @@
+<div class="body">
+   <div class="container">
+      <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        <h2 class="h2">Add Organization</h2>
+      
+     @if (errorMessage) {
+        <app-alert  [message]="errorMessage" type="error" (close)="onCloseAlert()"></app-alert>
+     }
+     
+      <div class="form-section">
+         <div class="esquerda">
+            
+            <app-text-input title="Name" label="Name" [(ngModel)]="organization.name" name="organization.name"
+            [ngClass]="{'error-field': errorMessage && !organization.name}">
+            </app-text-input>
+            <br>
+            
+            <app-text-input title="LogoUrl" label="LogoUrl" [(ngModel)]="organization.logoUrl" name="organization.logoUrl"
+            [ngClass]="{'error-field': errorMessage && !organization.logoUrl}">
+            </app-text-input>
+            <br>
+           
+            <app-text-input title="Street" label="Street" [(ngModel)]="organization.street" name="organization.street"
+            [ngClass]="{'error-field': errorMessage && !organization.street}">
+            </app-text-input>
+            <br>
+            
+            <app-text-input title="DoorNumber" label="DoorNumber" [(ngModel)]="organization.doorNumber" name="organization.doorNumber"
+            [ngClass]="{'error-field': errorMessage && !organization.doorNumber}">
+            </app-text-input>
+            <br>
+         </div>
+         <div class="direita">
+            
+            <app-text-input title="PostalCode" label="PostalCode" [(ngModel)]="organization.postalCode" name="organization.postalCode" 
+            [ngClass]="{'error-field': errorMessage && !organization.postalCode}">
+            </app-text-input>
+            <br>
+            
+            <app-text-input title="PhoneNumber" label="PhoneNumber" [(ngModel)]="organization.phoneNumber" name="organization.phoneNumber" 
+            [ngClass]="{'error-field': errorMessage && !organization.phoneNumber}">
+            </app-text-input>
+            <br>
+            
+            <app-text-input title="Email" label="Email" [(ngModel)]="organization.email" name="organization.email" 
+            [ngClass]="{'error-field': errorMessage && !organization.email}">
+            </app-text-input>
+            <br>
+            
+            <app-text-input title="AdminEmail" label="AdminEmail" [(ngModel)]="organization.adminEmail" name="organization.adminEmail"
+            [ngClass]="{'error-field': errorMessage && !organization.adminEmail}">
+            </app-text-input>
+         </div>
+      </div>
+      
+      <app-dropdown [information]="'Country'" [options]="countries" (selectionChange)="onSelectionChange($event)"></app-dropdown><br>
+      <app-primary-button (click)="AddOrganization()">Add Organization</app-primary-button>
+   </div>
+</div>

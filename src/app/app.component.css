@@ -1,0 +1,119 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
+}
+
+.icon {
+  cursor: pointer;
+  margin-right: 40px;
+  line-height: 60px;
+}
+
+.icon span {
+  background-color: #f00;
+  color: #fff;
+  font-size: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+
+
+.icon i{
+  display: inline-block;
+  width: 40px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.icon:hover{
+  opacity: .7;
+}
+
+.logo{
+  text-align: center;
+  flex:1;
+  margin-right: 50px;
+  color: #ff0000;
+  font-size: 20px;
+  font-family: monospace;
+  height: 30px;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+  white-space: nowrap;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.button-container app-secondary-button {
+  display: inline-block; 
+  margin-right: 20px; 
+}
+
+
+
+.notifi-box {
+  width: 300px;
+  height: auto; /* Ajusta a altura automaticamente conforme o conteúdo */
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 63px;
+  right: 35px;
+  transition: 1s opacity, 250ms height;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.notifi-box h2{
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  color: #999;
+}
+
+.notifi-box h2 span{
+  color: #f00;
+}
+
+.notifi-item {
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); /* Adiciona a sombra */
+  margin-bottom: 10px; /* Adiciona um espaçamento entre os itens de notificação */
+}
+
+.notifi-item .text {
+padding-bottom: 10px; /* Adiciona espaço abaixo do texto da notificação */
+}
+
+.notifi-item i {
+  display: block;
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.notifi-item .text h4{
+  overflow: visible;
+  flex-grow: 1;
+  margin-left: 10px;
+  word-wrap: break-word; /* Quebra a palavra para uma nova linha se necessário */
+}
+
+p{
+margin-left: 20px;
+}

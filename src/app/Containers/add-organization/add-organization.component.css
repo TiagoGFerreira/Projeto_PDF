@@ -1,0 +1,39 @@
+
+img {
+  display: block;
+  margin: 0 auto; /* Define a margem superior e inferior como 0 e a margem esquerda e direita como automática para centralizar horizontalmente */
+}
+
+.body {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  height: 100vh; /* Define a altura do body para a altura da tela */
+  margin: 0; /* Remove margens padrão */
+}
+
+.container {
+  border: 2px solid #ccc; /* Adiciona uma borda sólida */
+  width: 600px;
+  border-radius: 10px;
+  padding: 20px; /* Adiciona um preenchimento interno para separar o conteúdo da borda */
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-section{
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.esquerda, .direita {
+  width: 45%;
+}
+
+.h2
+{
+  text-align: center;
+}

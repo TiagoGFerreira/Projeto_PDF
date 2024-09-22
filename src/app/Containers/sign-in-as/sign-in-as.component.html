@@ -1,0 +1,15 @@
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        @if (errorMessage) {
+        <app-alert [message]="errorMessage" type="error" (close)="onCloseAlert()"></app-alert>
+        }
+        <h2>Sign In As</h2>
+        @if (this.isMaster == 1) {
+        <app-primary-button (click)="goToSelectOrganization('master')">Master</app-primary-button><br><br>
+        }
+        <app-primary-button (click)="goToSelectOrganization('admin')">Administrator</app-primary-button><br><br>
+        <app-primary-button (click)="goToSelectOrganization('employee')">Employee</app-primary-button><br><br>
+        <app-primary-button (click)="goToSelectOrganization('client')">Client</app-primary-button><br>
+    </div>
+</div>

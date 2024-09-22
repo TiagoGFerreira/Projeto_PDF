@@ -1,0 +1,12 @@
+<div class="custom-dropdown">
+  <label for="dropdown" class="input-label"> {{ information }} </label>
+
+  <select id="dropdown" class="dropdown-select" [(ngModel)]="selectedOptionId" (change)="onOptionSelect($event)">
+    <option class="dropdown-option" value="0"> Select {{ information }} </option> <!-- placeholder -->
+      @for (option of options; track option) {
+        <option class="dropdown-option" [value]="getOptionValue(option)">
+          {{ getOptionDisplay(option) }}
+        </option>
+      }    
+  </select>
+</div>

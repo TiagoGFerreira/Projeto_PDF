@@ -1,0 +1,26 @@
+<div class="body">
+    <div class="container">
+        <a href="../sign-up"><img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px"></a>
+        <h2>Sign Up</h2>
+        <form>
+            <div class="form-section">
+                <div class="esquerda">
+                    <app-text-input title="Email" label="Email" [(ngModel)]="user.email" name="email"></app-text-input><br>
+                    <app-text-input title="First Name" label="First Name" [(ngModel)]="user.firstName" name="firstName"></app-text-input><br>
+                    <app-text-input title="Street" label="Street" [(ngModel)]="user.street" name="street"></app-text-input><br>
+                    <app-text-input title="Phone Number" label="Phone Number" [(ngModel)]="user.phoneNumber" name="phoneNumber"></app-text-input><br>
+                  </div>
+                <div class="direita">
+                    <app-text-input title="Password" label="Password" type="password" [(ngModel)]="user.password" name="password"></app-text-input><br>
+                    <app-text-input title="Last Name" label="Last Name" [(ngModel)]="user.lastName" name="lastName"></app-text-input><br>
+                    <app-text-input title="Door Number" label="Door Number" [(ngModel)]="user.doorNumber" name="doorNumber"></app-text-input><br>
+                    <app-text-input title="Postal Code" label="Postal Code" [(ngModel)]="user.postalCode" name="postalCode"></app-text-input><br>
+                </div>
+            </div>
+            <div class="center">
+                <app-dropdown [information]="'Country'" [options]="countries" (selectionChange)="onSelectionChange($event)"></app-dropdown><br>
+                <app-primary-button (click)="SignUp()">Sign up</app-primary-button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+
+        <h2>Services</h2>
+        @for (service of serviceData; track service) {
+            <br><app-primary-button (click)="GoTo(service.id)">{{ service.name }}</app-primary-button><br>
+            }    
+    </div>
+</div>  

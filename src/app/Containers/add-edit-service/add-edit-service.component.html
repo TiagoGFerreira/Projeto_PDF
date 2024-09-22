@@ -1,0 +1,31 @@
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+
+        @if (action === 'add')
+        {
+        <h2>Add Service</h2>
+
+        <app-text-input title="Name" label="Name" name="name" [(ngModel)]="addService.name"></app-text-input><br>
+        <app-text-input title="Duration" label="Duration" type="number" name="Duration"
+            [(ngModel)]="addService.duration" step="5" min="5"></app-text-input><br>
+        <app-dropdown [information]="'Category'" [options]="categories"
+            (selectionChange)="onSelectionChange($event)"></app-dropdown><br>
+        <div class="center">
+            <app-primary-button (click)="AddService()">Add</app-primary-button>
+        </div>
+        }
+        @else if (action === 'edit')
+        {
+        <h2>Edit Service</h2>
+
+        <app-text-input title="Name" label="Name" name="name" [(ngModel)]="editService.name"></app-text-input><br>
+        <app-text-input title="Duration" label="Duration" type="number" name="Duration" [(ngModel)]="editService.duration" step="5" min="5"></app-text-input><br>
+        <app-dropdown [information]="'Category'" [options]="categories" (selectionChange)="onSelectionChangeCategory($event)"></app-dropdown><br>
+        <div class="center">
+            <app-primary-button (click)="EditService(serviceId)">Save</app-primary-button>
+        </div>
+        }
+
+    </div>
+</div>

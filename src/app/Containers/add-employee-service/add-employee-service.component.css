@@ -1,0 +1,36 @@
+img {
+  display: block;
+  margin: 0 auto; /* Define a margem superior e inferior como 0 e a margem esquerda e direita como automática para centralizar horizontalmente */
+}
+
+.body {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  height: 100vh; /* Define a altura do body para a altura da tela */
+  margin: 0; /* Remove margens padrão */
+}
+
+.container {
+  border: 2px solid #ccc; /* Adiciona uma borda sólida */
+  border-radius: 10px; /* Define o raio da borda para torná-la arredondada */
+  padding: 20px; /* Adiciona um preenchimento interno para separar o conteúdo da borda */
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.worktimes-container {
+  height: 50px;
+  display: flex;
+  align-items: center; /* alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* adiciona espaço entre o nome e os botões */
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.button-container app-secondary-button {
+margin-left: 7px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,7 @@
+<form class="example-form">
+  <div class="custom-input-container">
+    <label class="input-label">{{ title }}:</label>
+    <input class="custom-input" type="date" [(ngModel)]="selectedDate" (ngModelChange)="onDateChange($event)" [ngModelOptions]="{ standalone: true }">
+    <div class="input-bottom-border"></div>
+  </div>
+</form>

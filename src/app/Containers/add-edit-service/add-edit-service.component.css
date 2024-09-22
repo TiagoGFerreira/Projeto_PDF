@@ -1,0 +1,24 @@
+img {
+    display: block;
+    margin: 0 auto; /* Define a margem superior e inferior como 0 e a margem esquerda e direita como automática para centralizar horizontalmente */
+  }
+    
+  .body {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define a altura do body para a altura da tela */
+    margin: 0; /* Remove margens padrão */
+  }
+    
+  .container {
+    border: 2px solid #ccc; /* Adiciona uma borda sólida */
+    border-radius: 10px; /* Define o raio da borda para torná-la arredondada */
+    padding: 20px; /* Adiciona um preenchimento interno para separar o conteúdo da borda */
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .center{
+    display: flex;
+    justify-content: center;
+  }

@@ -1,0 +1,7 @@
+<div class="example-form" ngModelOptions="{standalone: true}">
+  <div class="custom-input-container">
+    <label class="input-label">{{ title }}</label>
+    <input class="custom-input" type="{{type}}" step="{{step}}" min="{{min}}" [placeholder]="label" name="{{title}}" [(ngModel)]="value" (input)="onInput($event)" required="true">
+    <div class="input-bottom-border"></div>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+
+
+<!-- <app-dropdown [information]="'Country'" (selectionChange)="onSelectionChange($event)"></app-dropdown> --> 
+
+
+<!-- <app-dropdown information="Country" (selectedValue)="onItemSelected($event, 'Country')"></app-dropdown>-->
+
+<!-- <router-outlet></router-outlet> -->
+
+ <!-- <app-dropdown [options]="['Option 1', 'Option 2', 'Option 3']" (optionSelected)="onOptionSelected($event)"></app-dropdown> -->
+
+<!-- <app-primary-button>TESTE</app-primary-button> 
+
+<br><br>
+
+<app-secondary-button>Teste 2</app-secondary-button>
+
+<br><br><br>
+
+<app-text-input title="Name" label="Teste"></app-text-input>
+
+
+<br><br><br>
+<app-date-input title="Date"></app-date-input>
+
+<br><br><br>
+<app-toggle-switch></app-toggle-switch>
+
+<br><br><br>
+<app-checkbox label="Label Service"></app-checkbox>
+
+<br><br><br>
+
+<br><br><br>
+
+<app-alert  id="1" type="success" message="mensagem de teste 1" (close)="hideAlert($event)"></app-alert>
+
+<app-alert  id="2" type="error" message="mensagem de teste 2" (close)="hideAlert($event)"></app-alert>
+
+<app-alert  id="3" message="mensagem de teste 3" (close)="hideAlert($event)"></app-alert>
+
+
+<app-radiobutton [options]="['Option 1', 'Option 2', 'Option 3']" [(selectedOption)]="selectedOption" (selectedOptionChange)="onOptionChange($event)"></app-radiobutton> -->
+
+@if(isAllowedRoute()){
+    <nav>
+        <div class="logo"> TimeCraft </div>
+        <div class="icon" (click)="toggleNotifi()">
+            <i class="icon-bell"></i><span>{{ numNot }}</span>
+        </div>
+        <div class="notifi-box" id="box">
+            <h2>Notification <span>{{ numNot }}</span></h2>
+    
+            @for(notification of notificationsData; track notification)
+            {
+                    <div class="notifi-item">
+                        <div class="text" (click)="markAsRead(notification.id)">
+                            <h4>{{ notification.type  }}</h4>
+                            <p>{{ notification.message }}</p>
+                            <br>
+                            @if(notification.type === "Request" && notification.message.startsWith("The user"))
+                            {
+                                <div class="button-container">
+                                <app-secondary-button (click)="responseClientRequest(notification.clientRequestId,1)">Aceitar</app-secondary-button>
+                                <app-secondary-button (click)="responseClientRequest(notification.clientRequestId,0)">Rejeitar</app-secondary-button>
+                                </div>  
+                            }
+                            @else if(notification.type === "Request" && notification.message.startsWith("You received"))
+                            {
+
+                                <app-secondary-button (click)="responseClientSwitchRequest(notification.appointmentSwitchRequestId,1)">Aceitar Troca</app-secondary-button>
+                                <app-secondary-button (click)="responseClientSwitchRequest(notification.appointmentSwitchRequestId,0)">Rejeitar Troca</app-secondary-button>
+                            }
+                        </div>
+                    </div>  
+            }
+    
+        </div>
+    </nav>
+}
+
+
+
+
+
+
+
+<router-outlet></router-outlet>

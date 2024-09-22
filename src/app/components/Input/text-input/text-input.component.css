@@ -1,0 +1,33 @@
+
+.input-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #F85F6A; 
+  font-family: Arial, sans-serif;
+}
+
+
+.custom-input {
+  border: none; 
+  border-bottom: 2px solid #ccc; 
+  background-color: white; 
+  padding: 5px 0; 
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+
+.custom-input::placeholder {
+  color: #000000; 
+}
+
+
+.custom-input:hover {
+  border-bottom-color: #999; 
+}
+
+
+.custom-input:focus {
+  border-bottom-color: #F85F6A; 
+  outline: none; 
+}

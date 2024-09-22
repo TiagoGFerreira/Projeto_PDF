@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Client Requests for {{ organization.name }}</h2>
+    <!-- <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+    <div *ngIf="clientRequests.length === 0">No client requests found.</div> -->
+
+    <ul>
+      @for(client of clientRequests; track client)
+      {
+        <li>
+          <strong>{{ request.clientName }}</strong> - {{ request.requestDate | date }}
+          <button (click)="approveRequest(request)">Approve</button>
+          <button (click)="rejectRequest(request)">Reject</button>
+        </li>
+      }
+    </ul>
+
+
+  </div>
+  

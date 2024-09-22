@@ -1,0 +1,16 @@
+
+<div class="body">
+    
+
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        <h2>Sign In</h2>
+        <app-text-input title="Email" label="Email" [(ngModel)]="this.user.email" name="email"></app-text-input><br><br>
+        <app-text-input title="Password" label="Password" [(ngModel)]="this.user.password" type="password" name="password"></app-text-input><br><br>
+        <app-primary-button (click)="SignIn()">Sign in</app-primary-button><br><br>
+        <div class="link-container">
+            <a href="../sign-up" id="SignUp">Sign Up</a>
+            <a href="../recover-password/" id="RecoverPassword">Recover Password</a>
+        </div>
+    </div>
+</div>

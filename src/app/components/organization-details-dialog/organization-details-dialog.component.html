@@ -1,0 +1,11 @@
+<div class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <h2>{{ organization.name }}</h2>
+      <p><strong>Category:</strong> {{ organization.category }}</p>
+      <p><strong>Description:</strong> {{ organization.description }}</p>
+      <!-- Add more fields as needed -->
+      <button (click)="onRequestClient()">Request to be a Client</button>
+    </div>
+  </div>
+  

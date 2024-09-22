@@ -1,0 +1,20 @@
+ 
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        <h2>Admin Services</h2>
+        <div class="center">
+            <app-primary-button (click)="GoToAdd()">Add</app-primary-button>
+        </div>
+        <br>
+        @for (service of servicesData; track service){
+        <div class="category-container">
+            <strong>{{ service.name }}</strong>
+            <div class="button-container">
+                <app-secondary-button (click)="GoToEdit(service.id)">Edit</app-secondary-button>
+                <app-secondary-button (click)="DeleteService(service.id)">Delete</app-secondary-button>
+            </div>
+        </div>
+        }
+    </div>
+</div> 

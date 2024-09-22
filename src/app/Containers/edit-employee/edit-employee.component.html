@@ -1,0 +1,34 @@
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        <h2>Edit Employee</h2>
+
+        <div class="center">
+            <app-primary-button (click)="GoToAddEmployeeService()">Edit Employee Services</app-primary-button><br><br>
+        </div>
+        @for (service of servicesData; track service){
+        <div class="worktimes-container">
+            <strong>{{ service.name }}</strong>
+        </div>
+        }
+
+        <br>
+
+        <div class="center">
+            <app-primary-button (click)="GoTo()">Add Worktime</app-primary-button><br><br>
+        </div>
+
+        <br>
+
+        @for (worktime of worktimesData; track worktime)
+        {
+        <div class="worktimes-container">
+            <div>{{ daysOfWeek[worktime.dayOfWeekId-1].name }}</div>
+            {{ convertMinutesToTime(worktime.startTime) }} - {{ convertMinutesToTime(worktime.endTime) }}
+            <div class="button-container">
+                <app-secondary-button (click)="DeleteWorktime(worktime.id)">Delete</app-secondary-button><br>
+            </div>
+        </div>
+        }
+    </div>
+</div>

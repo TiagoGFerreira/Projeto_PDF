@@ -1,0 +1,23 @@
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        <h2>Add Employee Service</h2>
+
+        <app-dropdown [information]="'Service'" [options]="services"
+            (selectionChange)="onSelectionChange($event)"></app-dropdown>
+        @for (service of servicesData; track service){
+        <div class="worktimes-container">
+            <strong>{{ service.name }}</strong>
+            <div class="button-container">
+                <app-secondary-button (click)="DeleteEmployeeService(service.id)">Delete</app-secondary-button><br>
+            </div>
+        </div>
+        }
+
+        <br>
+
+        <div class="center">
+            <app-primary-button (click)="AddEmployeeService()">Add Service</app-primary-button><br><br>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        @if (errorMessage) {
+            <app-alert  [message]="errorMessage" type="error" (close)="onCloseAlert()"></app-alert>
+        }
+        @if (successMessage) {
+            <app-alert  [message]="successMessage" type="success" (close)="onCloseAlert2()"></app-alert>
+        }
+
+        <h2>Available Times</h2>
+        
+        @for (freeTime of freeTimesData; track freeTime) 
+        {
+            <div class="service-container">
+                
+                <div class="button-container">
+                    @if (type === 'add')
+                    {
+                            @if(freeTime.appointmentId === null) {
+                            @if (origin === 'client') {
+                                <strong>{{ unixTimestampToTimeString(freeTime.startTime) }}</strong>
+                                <app-secondary-button (click)="addAppointment(freeTime.startTime,this.serviceId,freeTime.employeeId,clientId)">Select</app-secondary-button>
+                            }
+                            }
+                    }
+                    @else {
+                        
+                        @if (freeTime.startTime != this.appointmentStartTime)
+                        {
+                            
+                            @if (freeTime.appointmentId != null) {
+                                <strong>{{ unixTimestampToTimeString(freeTime.startTime) }}</strong>
+                                <app-secondary-button (click)="SwitchRequest(freeTime.appointmentId,origin)">Sugest Trade</app-secondary-button>
+                            }
+                            @else {
+                                <strong>{{ unixTimestampToTimeString(freeTime.startTime) }}</strong>
+                                <app-secondary-button (click)="EditAppointment(this.appointmentId,freeTime.startTime)">Update</app-secondary-button>
+                            }
+                        }
+                    }
+                </div>    
+            </div>
+        }
+    </div>
+</div>

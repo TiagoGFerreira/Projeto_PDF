@@ -1,0 +1,8 @@
+<form class="example-form">
+    <div class="custom-input-container">
+      <label class="input-label">{{ title }}:</label>
+      <input class="custom-input" type="time" [(ngModel)]="selectedTime" (ngModelChange)="onTimeChange($event)" [ngModelOptions]="{ standalone: true }">
+      <div class="input-bottom-border"></div>
+    </div>
+  </form>
+  

@@ -1,0 +1,35 @@
+.radio-container {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.radio-container input[type="radio"] {
+
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+}
+
+.radio-container span.radio-checkmark {
+  display: block;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-right: 5px; 
+}
+
+.radio-container input[type="radio"]:checked + span.radio-checkmark {
+  background-color:#F85F6A;
+}
+
+.radio-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,33 @@
+
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        @if (errorMessage) {
+            <app-alert  [message]="errorMessage" type="error" (close)="onCloseAlert()"></app-alert>
+        }
+        @if (successMessage) {
+            <app-alert  [message]="successMessage" type="success" (close)="onCloseAlert2()"></app-alert>
+         }
+        <h2>Day</h2>
+        <div class="center">
+            @if(origin === 'client') {
+                <app-primary-button (click)="GoToServices()">Add</app-primary-button>
+            }
+        </div>
+        <br>
+        @for (appointment of appointmentData; track appointment) 
+        {
+        <div class="dayServices-container">
+            <strong>{{ appointment.service.name }}</strong>&nbsp;&nbsp;&nbsp;
+            <strong>{{ unixTimestampToTimeString(appointment.dateTime) }}</strong>
+            <div class="button-container">
+                @if(origin === 'client')
+                {
+                    <app-secondary-button (click)="GoToAvailableTimes(appointment.id,appointment.dateTime)">Edit</app-secondary-button>
+                }
+                <app-secondary-button (click)="deleteAppointment(appointment.id)">Delete</app-secondary-button>
+            </div>
+        </div>
+    }
+    </div>  
+</div> 

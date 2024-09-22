@@ -1,0 +1,56 @@
+import { Routes } from '@angular/router';
+import { SignInComponent } from './Containers/sign-in/sign-in.component';
+import { SignUpComponent } from './Containers/sign-up/sign-up.component';
+import { RecoverPasswordComponent } from './Containers/recover-password/recover-password.component';
+import { NewPasswordComponent } from './Containers/new-password/new-password.component';
+import { MasterComponent } from './Containers/master/master.component';
+import { SignInAsComponent } from './Containers/sign-in-as/sign-in-as.component';
+import { AddOrganizationComponent } from './Containers/add-organization/add-organization.component'
+import { CategoriesManagementComponent } from './Containers/categories-management/categories-management.component';
+import { AddCategoryComponent } from './Containers/add-category/add-category.component';
+import { SelectOrganizationComponent } from './Containers/select-organization/select-organization.component';
+import { AdministratorComponent } from './Containers/administrator/administrator.component';
+import { AdminServicesComponent } from './Containers/admin-services/admin-services.component';
+import { AdminEmployeesComponent } from './Containers/admin-employees/admin-employees.component';
+import { AddEditServiceComponent } from './Containers/add-edit-service/add-edit-service.component';
+import { EditEmployeeComponent } from './Containers/edit-employee/edit-employee.component';
+import { AddEmployeeComponent } from './Containers/add-employee/add-employee.component';
+import { SearchOrganizationsComponent } from './Containers/search-organizations/search-organizations.component';
+import { CalendarComponent } from './Containers/calendar/calendar.component';
+import { ServicesComponent } from './Containers/services/services.component';
+import { AvailableTimesComponent } from './Containers/available-times/available-times.component';
+import { DayServicesComponent } from './Containers/day-services/day-services.component';
+import { UpdateOrganizationComponent } from './Containers/update-organization/update-organization.component';
+import { OrganizationsManagementComponent } from './Containers/organizations-management/organizations-management.component';
+import { WorktimeEmployeeComponent } from './Containers/worktime-employee/worktime-employee.component';
+import { AddEmployeeServiceComponent } from './Containers/add-employee-service/add-employee-service.component';
+
+export const routes: Routes = [
+    { path: 'sign-in', component: SignInComponent },
+    { path: 'sign-up', component: SignUpComponent },
+    { path: 'recover-password', component: RecoverPasswordComponent },
+    { path: 'new-password', component: NewPasswordComponent },
+    { path: 'sign-in-as', component: SignInAsComponent },
+    { path: 'master', component: MasterComponent },
+    { path: 'add-organization', component: AddOrganizationComponent },
+    { path: 'categories-management', component: CategoriesManagementComponent },
+    { path: 'add-category', component: AddCategoryComponent },
+    { path: 'select-organization', component: SelectOrganizationComponent },
+    { path: 'administrator', component: AdministratorComponent },
+    { path: 'admin-employees', component: AdminEmployeesComponent },
+    { path: 'admin-services', component: AdminServicesComponent },
+    { path: 'add-edit-service', component: AddEditServiceComponent },
+    { path: 'edit-employee', component: EditEmployeeComponent },
+    { path: 'add-employee', component: AddEmployeeComponent },
+    { path: 'search-organizations', component: SearchOrganizationsComponent },
+    { path: 'calendar', component: CalendarComponent },
+    { path: 'services', component: ServicesComponent },
+    { path: 'available-times', component: AvailableTimesComponent },
+    { path: 'day-services', component: DayServicesComponent },
+    { path: 'add-employee', component: AddEmployeeComponent },
+    { path: 'update-organization', component: UpdateOrganizationComponent },
+    { path: 'organizations-management', component: OrganizationsManagementComponent },
+    { path: 'update-organization/:id', component: UpdateOrganizationComponent },
+    { path: 'worktime-employee', component: WorktimeEmployeeComponent },
+    { path: 'add-employee-service', component: AddEmployeeServiceComponent }
+];

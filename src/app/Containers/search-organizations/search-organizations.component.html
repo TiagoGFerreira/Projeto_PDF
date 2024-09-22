@@ -1,0 +1,42 @@
+<div class="body">
+    <div class="container">
+      <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+      <h2>Search Organizations</h2>
+      <div>
+        
+        @if(errorMessage)
+        {
+            <app-alert [message]="errorMessage" type="error" (close)="onCloseAlert()"></app-alert>
+        }
+        
+        <i class="icon-search"></i>
+        <br><br>
+
+      </div>
+
+      @for (organization of filteredOrganizations; track organization) {
+        <div class="organization-container">
+            <strong>{{organization.name}}</strong>
+            <div class="button-container">
+              <app-secondary-button (click)="CreateRequest(organization.id)">Send Request</app-secondary-button>
+            </div>
+            <div class="button-container">
+            <app-secondary-button (click)="openDetailsModal(organization)">Details</app-secondary-button>
+          </div>
+        </div>
+        }
+        
+
+      @if(selectedOrganization)
+      {
+        <div class="modal-content">
+          <span class="close" (click)="closeDetailsModal()">&times;</span>
+          <h2>Name: {{ selectedOrganization.name }}</h2>
+          <p>Street: {{ selectedOrganization.address.street }} {{ selectedOrganization.address.number }}</p>
+          <p>Postal Code : {{ selectedOrganization.address.postalCode.code }}</p>
+          <p>Country : {{ selectedOrganization.address.country.name }}</p>
+        </div>
+      }
+    </div>
+  </div>
+  

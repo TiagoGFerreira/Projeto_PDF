@@ -1,0 +1,20 @@
+.custom-button {
+  width: 275px; 
+  height: 50px;
+  background-color: #F85F6A; 
+  color: white; 
+  border-radius: 7px;
+  border: 0px;
+  cursor: pointer;
+  pointer-events: auto; 
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #E64A55; 
+}
+
+.custom-button:active {
+  background-color: #C9444F; 
+}

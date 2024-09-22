@@ -1,0 +1,14 @@
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        <h2>Add Worktime</h2>
+        <app-dropdown [information]="'Day'" [options]="daysOfWeek" (selectionChange)="onSelectionChangeDayOfWeek($event)"></app-dropdown><br>
+        <app-time-input title="Start Time" [(selectedTime)]="startTime"></app-time-input>
+        <br>
+        <app-time-input title="End Time" [(selectedTime)]="endTime"></app-time-input>
+        <br>
+        <div class="center">
+            <app-primary-button (click)="AddWorktime()">Add</app-primary-button><br><br>
+        </div>
+    </div>
+</div>

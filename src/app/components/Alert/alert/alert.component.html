@@ -1,0 +1,4 @@
+<div class="alert" [ngClass]="{ 'alert-success': type === 'success', 'alert-danger': type === 'error' }">
+    <p>{{ message }}</p>
+    <button (click)="onClose()"> X </button>
+</div>

@@ -1,0 +1,22 @@
+
+ 
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        <h2>Admin Employees</h2>
+        <div class="center">
+            <app-primary-button (click)="GoToAdd()">Add</app-primary-button>
+        </div>
+        <br>
+        @for (employee of employeesData; track employee) 
+        {
+            <div class="category-container">
+                <strong>{{ employee.firstName }}</strong>
+                <div class="button-container">
+                    <app-secondary-button (click)="GoToEdit(employee.id)">Edit</app-secondary-button>
+                    <app-secondary-button (click)="DeleteEmployee(employee.id)">Delete</app-secondary-button>
+                </div>
+            </div>
+        }
+    </div>
+</div> 

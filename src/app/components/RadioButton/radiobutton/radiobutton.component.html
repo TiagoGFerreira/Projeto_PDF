@@ -1,0 +1,7 @@
+<div *ngFor="let option of options" class="radio-container">
+    <input type="radio" [checked]="option === selectedOption" (change)="selectOption(option)">
+    <span class="radio-checkmark"></span>
+    <span class="radio-label">{{ option }}</span>
+    <br>
+</div>
+  

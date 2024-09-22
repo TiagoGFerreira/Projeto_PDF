@@ -1,0 +1,8 @@
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+        <h2>Calendar</h2>
+        <app-date-input [(selectedDate)]="selectedDate" (selectedDateChange)="onDateSelected($event)"></app-date-input><br>
+        <app-primary-button (click)="GoTo()">Go</app-primary-button>
+    </div>
+</div>

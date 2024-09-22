@@ -1,0 +1,20 @@
+<div class="body">
+    <div class="container">
+        <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+
+        <h2>Select Organization</h2>
+
+        @if (errorMessage) {
+        <app-alert [message]="errorMessage" type="error" (close)="onCloseAlert()"></app-alert>
+        }
+
+        @for (organization of organizationData; track organization) {
+        <br><app-primary-button (click)="GoToOrganization(origin,organization.id)">{{ organization.name }}</app-primary-button><br>
+        }
+
+        @if (origin === 'client') {
+            <br><app-primary-button (click)="GoToSearch()">Search organizations</app-primary-button>
+             
+        }
+    </div>
+</div>

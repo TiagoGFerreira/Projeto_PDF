@@ -1,0 +1,54 @@
+<div class="body">
+   <div class="container">
+     <img src="../assets/Timecraft.jpg" alt="Timecraft" width="100px" height="100px">
+     <h2 class="h2">Update Organization</h2>
+     
+     <!-- Alerta de erro -->
+     @if (errorMessage) {
+       <app-alert  [message]="errorMessage" type="error" (close)="onCloseAlert()"></app-alert>
+     }
+ 
+     <div class="form-section">
+      <div class="esquerda">
+         
+         <app-text-input title="Name" [label]="organizationData?.data?.name" [(ngModel)]="updateData.name" name="organizationData.Name">
+         </app-text-input>
+         <br>
+         
+         <app-text-input title="LogoUrl" [label]="organizationData?.data?.logoUrl" [(ngModel)]="updateData.logoUrl" name="organizationData.LogoUrl"
+         >
+         </app-text-input>
+         <br>
+        
+         <app-text-input title="Street" [label]="organizationData?.data?.address?.street" [(ngModel)]="updateData.street" name="organizationData.Street">
+         </app-text-input>
+         <br>
+         
+         <app-text-input title="DoorNumber" [label]="organizationData?.data?.address?.number" [(ngModel)]="updateData.doorNumber" name="organizationData.DoorNumber">
+         </app-text-input>
+         <br>
+      </div>
+      <div class="direita">
+         
+         <app-text-input title="PostalCode" [label]="organizationData?.data?.address?.postalCode?.code" [(ngModel)]="updateData.postalCode" name="organizationData.PostalCode" >
+         </app-text-input>
+         <br>
+         
+         <app-text-input title="PhoneNumber" label="PhoneNumber" [(ngModel)]="updateData.phoneNumber" name="organizationData.PhoneNumber" >
+         </app-text-input>
+         <br>
+         
+         <app-text-input title="Email" label="Email" [(ngModel)]="updateData.email" name="organizationData.Email" >
+         </app-text-input>
+         <br>
+         
+         <app-text-input title="AdminEmail" label="AdminEmail" [(ngModel)]="updateData.adminEmail" name="organizationData.AdminEmail">
+         </app-text-input>
+         <br>
+      </div>
+   </div>
+   <app-dropdown [information]="'Country'" [options]="countries" (selectionChange)="onSelectionChange($event)"></app-dropdown><br>
+   <app-primary-button (click)="UpdateOrganization()">Update Organization</app-primary-button>
+   </div>
+ </div>
+ 
